@@ -1,0 +1,187 @@
+/* Homepage Styles */
+/* (C) 2020 Hox Design Co., Jordan Sigmund */
+
+/* Splash Section */
+.splash {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url("svg/SPLASH.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.splash .hamburger {
+    display: block;
+    height: 25px;
+    padding-top: 25px;
+    margin: 0 auto 0 auto;
+}
+#splashMenu a {
+    position: relative;
+    display: block;
+    float: left;
+    font-weight: 800;
+    font-style: italic;
+    font-size: 10pt;
+    letter-spacing: 2pt;
+    line-height: 100px;
+    text-align: center;
+    width: 32.5%;
+}
+#splashMenu a:hover {
+    color: #EBE9E4;
+}
+.splash .logo {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.splash .logo img {
+    width: 100%;
+    height: auto;
+}
+
+#downArrow {
+    display: block;
+    height: 25px;
+    margin: 0 auto 0 auto;
+    transition: all 500 ease;
+}
+.arrowMove {
+    margin-top: -100px;
+}
+
+/* Banner */
+.banner {
+    line-height: 50px;
+}
+
+/* Work */
+.workblock {
+    width: 100%;
+    max-width: 1000px;
+    height: 0;
+    padding-top: 100%;
+    position: relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.workblock h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#work a:hover {
+    color: #EBE9E4;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 1000px) {
+    #about img {
+        padding-bottom: 20px;
+    }
+}
+@media only screen and (min-width: 1000px) {
+    #splashMenu a {
+        font-size: 12pt;
+        letter-spacing: 3pt;
+    }
+    #splashMenu a:after {
+        content: '';
+        position: absolute;
+        width: 0;
+        display: block;
+        height: 2pt;
+        margin: 0 25% 0 50%;
+        background-color: #EBE9E4;
+        bottom: 30px;
+        transition: all .5s ease;
+    }
+    #splashMenu a:hover:after {
+        width: 50%;
+        margin-left: 25%;
+    }
+    
+    .banner {
+        line-height: 100px;
+    }
+    
+    .workblock {
+        width: 24%;
+        padding-top: 24%;
+        margin: .5%;
+        position: relative;
+        float: left;
+    }
+    
+    h2 {
+        font-size: 12pt;
+    }
+    .workblock h2 {
+        width: 75%;
+    }
+    
+    #work a h2 {
+        opacity: 50%;
+        transition: opacity .5s ease;
+    }
+    #work a:hover h2 {
+        opacity: 100%;
+    }
+    
+    .workBlack {
+        display: block;
+        width: 100%;
+        padding-top: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #121212;
+        opacity: 0;
+        transition: opacity .5s ease;
+    }
+    #work a:hover .workBlack {
+        opacity: 50%;
+    }
+    
+    .typeWork {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translatex(-50%);
+        font-size: 10pt;
+        font-weight: 400;
+        font-style: normal;
+        opacity: 0;
+        transition: all .5s ease;
+    }
+    #work a:hover .typeWork {
+        top: 115%;
+        opacity: 1;
+    }
+    
+    #ig {
+        background-size: cover;
+    }
+    
+    #about {
+        padding-top: 20px;
+        margin: 0 140px 0 140px;
+        clear: both;
+        position: relative;
+    }
+    #about img {
+        margin: 0 0 0 50%;
+    }
+    
+    .leftBar {
+        display: block;
+        position: absolute;
+        margin: .5%;
+        top: 50%;
+        left: 25%;
+        transform: translate(-50%, -50%);
+    }
+}

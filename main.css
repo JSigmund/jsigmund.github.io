@@ -1,0 +1,192 @@
+/* Homepage Styles */
+/* (C) 2020 Hox Design Co., Jordan Sigmund */
+
+/* RESET */
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address,big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul,li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed,figure, figcaption,footer, header, hgroup,menu, nav, output, ruby, section, summary,time, mark, audio, video {margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}article, aside, details, figcaption, figure,footer,header, hgroup, menu, nav, section {display: block;}body {line-height: 1;}ol, ul{list-style: none;}blockquote, q {quotes: none;}blockquote:before, blockquote:after,q:before, q:after {content: "";content: none;}table {border-collapse: collapse;border-spacing: 0;}
+
+/* colors
+
+blue: #40557A;
+black: #121212;
+white: #EBE9E4;
+
+*/
+
+html {
+    scroll-behavior: smooth;
+    background-color: #121212;
+}
+
+body {
+    background-color: #121212;
+    font-family: 'Open Sans', sans-serif;
+    color: #EBE9E4;
+}
+
+.desktop {
+    display: none;
+}
+
+.height-1 { height: 50px; }
+.height-2 { height: 100px; }
+
+.bottom { position: absolute; bottom: 0; left: 0;}
+
+.fullwide {width: 100%;}
+
+/* Preloader */
+body.preloader-site {
+    overflow: hidden;
+}
+
+.preloader-wrapper {
+    height: 100%;
+    width: 100%;
+    background: #121212;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999999;
+}
+
+.preloader-wrapper .preloader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 120px;
+}
+
+/* Text Formatting */
+
+h1 {
+    font-size: 25pt;
+    font-weight: 800;
+    font-style: italic;
+    letter-spacing: 2pt;
+}
+h2 {
+    font-weight: 800;
+    font-style: italic;
+    font-size: 20pt;
+    letter-spacing: 2pt;
+    text-align: center;
+}
+h3 {
+    font-weight: 800;
+    font-style: italic;
+    font-size: 10pt;
+    letter-spacing: 2pt;
+    line-height: 12pt;
+    text-align: center;
+}
+h4 {
+    display: block;
+    clear: both;
+    font-weight: 800;
+    font-style: italic;
+    font-size: 6pt;
+    letter-spacing: 2pt;
+    text-align: center;
+    padding-top: 5px;
+}
+p {
+    font-weight: 400;
+    font-size: 10pt;
+    text-align: left;
+    line-height: 12pt;
+    letter-spacing: 1pt;
+    padding: 5px 0 5px 0;
+}
+p:first-of-type { padding: 20px 0 5px 0;}
+p:last-of-type { padding: 5px 0 20px 0;}
+
+a {
+    text-decoration: none;
+    color: #EBE9E4;
+}
+a:hover{
+    color: #40557A;
+}
+
+/* Specific Universal Elements */
+
+/* Footer */
+.footer {
+    width: 100%;
+    height: 60px;
+    margin-top: 20px;
+    padding: 20px 0 20px 0;
+    background-image: url("svg/SPLASH.svg");
+    background-size: cover;
+    position: relative;
+    clear: both;
+}
+
+.footerInfo {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.footer a {
+    width: 33%;
+    display: block;
+    float: left;
+}
+.footer img {
+    width: 100%;
+    max-height: 35px;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 1000px) {
+    .m-varheight {height: 50px;}
+    
+    .col-1 { width: 25%; }
+    .col-2 { width: 50%; }
+    .col-3 { width: 75%; }
+    .col-4 { width: 100%; }
+
+    [class*="col-"] { display: block; margin: 0 auto 0 auto;}
+}
+@media only screen and (min-width: 1000px) {
+    .mobile {
+        display: none;
+    }
+    .desktop {
+        display: block;
+    }
+    
+    a {
+        transition: color .5s ease;
+    }
+    
+    .d-varheight {height: 100px;}
+    
+    .d-grid {max-width: 100%; margin: 0 140px 0 140px;}
+    
+    .d-col-1 {width: 8.33%;}
+    .d-col-2 {width: 16.66%;}
+    .d-col-3 {width: 25%;}
+    .d-col-4 {width: 33.33%;}
+    .d-col-5 {width: 41.66%;}
+    .d-col-6 {width: 50%;}
+    .d-col-7 {width: 58.33%;}
+    .d-col-8 {width: 66.66%;}
+    .d-col-9 {width: 75%;}
+    .d-col-10 {width: 83.33%;}
+    .d-col-11 {width: 91.66%;}
+    .d-col-12 {width: 100%;}
+    
+    [class*="col-"] { display: block; margin: 0 auto 0 auto;}
+    
+    h2 {
+        font-size: 22pt;
+    }
+    h3 {
+        font-size: 12pt;
+        letter-spacing: 3pt;
+    }
+}

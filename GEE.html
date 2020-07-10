@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />     
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        
+        <meta name="author" content="Jordan Sigmund" />
+        <meta name="description" content="Hox Design Co. | Modern Design, Materialist Finishings." />
+        
+        <link rel="shortcut icon" href="svg/HOX.svg" />
+        
+        <title>Hox Design Co. | Get Even Entertainment</title>
+        
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet" />
+        
+        <link href="main.css" type="text/css" rel="stylesheet" />
+        <link href="work.css" type="text/css" rel="stylesheet" />
+        
+        <!-- (C) 2020 Hox Design Co, Jordan Sigmund -->
+
+    </head>
+    
+    <body>
+        
+        <!-- Preloader -->
+        <div class="preloader-wrapper">
+            <div class="preloader">
+                <img src="svg/preloader.gif" alt="LOADING">
+            </div>
+        </div>
+        
+        <!-- Header -->
+        <div id="menu">
+            <div class="d-grid">
+                <a href="index.html#work" class="homeButton"><img src="svg/WORK.svg" alt="WORK" /></a>
+                <a href="index.html" class="menuLogo"><img src="svg/HOXfull.svg" alt="WORK" /></a>
+                <div class="navButtons">
+                    <div class="navButtonsPos">
+                        <a href="communityparty.html"><img src="svg/BACK.svg" alt="BACK" /></a>
+                        <a href="willielock.html"><img src="svg/BACK.svg" alt="NEXT" style="transform: rotate(180deg);" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Case Study -->
+        <div id="caseStudy" class="col-3 d-grid">
+            <div class="caseInfo">
+                <h1>GET EVEN ENTERTAINMENT</h1>
+
+                <p style="padding: 20px 0 20px 0;">
+                    Get Even Entertainment requested an all-inclusive branding overhaul - including light and dark color-palettes, font choice, and logotype design for social platforms, email signatures and web design.<br />
+                    <br />
+                    All rasterized and digital formats were designed and generated primarily for digital display, but are flexible enough for print of any application as well.
+                </p>
+            </div>
+            
+            <div class="caseImages">
+                <img src="GEE/M-Mock.jpg" class="mobile" />
+                <img src="GEE/M-Mac.jpg" class="mobile" />
+                <img src="GEE/DarkGuide.jpg" class="mobile" />
+                <img src="GEE/LightGuide.jpg" class="mobile" />
+                
+                <img src="GEE/D-Mock.jpg" class="desktop" />
+                <img src="GEE/D-Mac.jpg" class="desktop" />
+                <img src="GEE/DarkGuide.jpg" class="desktop" />
+                <img src="GEE/LightGuide.jpg" class="desktop" />
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <div class="footerInfo d-col-3">
+                <a href="https://www.instagram.com/hoxdesignco/" title="INSTAGRAM"><img src="svg/IG.svg" alt="Instagram" /></a>
+                <a href="https://www.facebook.com/hoxdesignco/" title="FACEBOOK"><img src="svg/FACEBOOK.svg" alt="Facebook" /></a>
+                <a href="https://forms.gle/GsUho5vwoR4YF6rQ7" target="_blank" title="CONTACT"><img src="svg/EMAIL.svg" alt="EMAIL" /></a>
+                <h4>© HOX DESIGN CO.</h4>
+            </div>
+        </div>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script type="text/javascript" src="home.js"></script>
+        <script type="text/javascript">
+            $("document").ready(function(){
+                $("body").hide().fadeIn(1000);
+                
+                $(document).on("click", "a", function () {
+
+                    var newUrl = $(this).attr("href");
+
+                    if (!newUrl || newUrl[0] === "#") {
+                        location.hash = newUrl;
+                        return;
+                    }
+
+                    $("body").fadeOut(500, function () {
+                        location = newUrl;
+                    });
+
+                    return false;
+                });
+            });
+        </script>
+        
+    </body>
+    
+</html>
