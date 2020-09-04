@@ -55,7 +55,10 @@ body.preloader-site {
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    width: 150px;
+}
+.preloader img {
+    width: 100%;
+    height: auto;
 }
 
 /* Text Formatting */
