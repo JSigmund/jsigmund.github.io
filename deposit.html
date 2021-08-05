@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="utf-8" />     
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        
+        <meta http-equiv="cache-control" content="Public" />
+        <meta http-equiv="Expires" content="31536000" />
+        
+        <meta name="author" content="Jordan Sigmund" />
+        <meta name="description" content="Hox Design Co. | Make a Deposit" />
+        
+        <link rel="shortcut icon" href="svg/HOX.svg" />
+        
+        <title>Hox Design Co. | Make a Deposit</title>
+        
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet" />
+        
+        <link href="https://fonts.googleapis.com
+/css?family=Roboto:100,300,400,500,100i,200i,300i,400i,500i" rel="stylesheet" disabled />
+        
+        <!--
+        <link href="main.css" type="text/css" rel="stylesheet" />
+        <link href="home.css" type="text/css" rel="stylesheet" /> -->
+        
+        <link href="finalhome.css" type="text/css" rel="stylesheet" />
+        
+        <!-- (C) 2021 Hox Design Co, Jordan Sigmund -->
+    </head>
+
+    <body>
+        
+        <!-- Preloader -->
+        <div class="preloader-wrapper">
+            <div class="preloader col-2 d-col-4">
+                <img src="svg/HOXfull.svg" class="mobile" alt="LOADING" />
+                <img src="svg/HOXfull.svg" class="desktop" alt="LOADING" />
+            </div>
+        </div>
+        
+        <!-- Splash Page -->
+        <div class="splash">
+            
+            <div class="d-grid">
+            
+                <!-- MENU LINKS -->
+                <div class ="height-2 col-3 d-col-6" id="splashMenu">
+                    <!-- <img src="svg/hamburger.svg" class="hamburger" /> -->
+                    <a href="#work">WORK</a> <a href="#about">ABOUT</a> <a href="https://forms.gle/GsUho5vwoR4YF6rQ7" target="_blank">CONTACT</a> <a href="https://shop.hoxdesign.co/">SHOP</a>
+                </div>
+                
+                <!-- Logo -->
+                <div class="col-2 d-col-4 logo">
+                    <img src="svg/HOXfull.svg" alt="HOX Design Co."/>
+                </div>
+                
+                <!-- Down Arrow -->
+                <div class="height-1 fullwide bottom">
+                    <a href="#workBanner"><img src="svg/EXPAND.svg" id="downArrow" /></a>
+                </div>
+                
+            </div>
+            
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="footerInfo d-col-3">
+                <a href="https://www.instagram.com/hoxdesignco/" title="INSTAGRAM"><img src="svg/IG.svg" alt="Instagram" /></a>
+                <a href="https://www.facebook.com/hoxdesignco/" title="FACEBOOK"><img src="svg/FACEBOOK.svg" alt="Facebook" /></a>
+                <a href="https://forms.gle/GsUho5vwoR4YF6rQ7" title="CONTACT" target="_blank"><img src="svg/EMAIL.svg" alt="EMAIL" /></a>
+                <h4>© HOX DESIGN CO.</h4>
+            </div>
+        </div>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script type="text/javascript">
+            $("document").ready(function(){
+    
+                var Body = $('body');
+
+                // Preloader
+                Body.addClass('preloader-site');
+            });
+
+            $(window).load(function() {
+
+                // Page Load
+                $('.preloader-wrapper').fadeOut();
+                $('body').removeClass('preloader-site');
+
+                $("body").hide().fadeIn(1000);
+                $("#splashMenu").hide().delay(1000).fadeIn(500);
+                $("#downArrow").hide().delay(1000).fadeIn(500);
+
+                // Page Unload
+                $(document).on("click", "a", function () {
+
+                    var newUrl = $(this).attr("href");
+
+                    if (!newUrl || newUrl[0] === "#") {
+                        location.hash = newUrl;
+                        return;
+                    }
+
+                    $("body").fadeOut(500, function () {
+                        location = newUrl;
+                    });
+
+                    return false;
+                });
+            });
+        </script>
+        <!-- <script src="home.js"></script> -->
+        
+    </body>
+</html>
