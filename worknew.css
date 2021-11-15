@@ -1,0 +1,78 @@
+/* Case Study Styles */
+/* (C) 2021 Hox Design Co. / Jordan Sigmund */
+
+/* MENU */
+#blueStripe {
+    width: 100%;
+    height: .25vh;
+    top: 0;
+    left: 0;
+    background-color: #40557A;
+    display: block;
+    position: relative;;
+}
+#caseHead {
+    width: 100%;
+    height: 15vh;
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: block;
+    position: relative;
+}
+#caseNav {
+    width: 50%;
+    left: 50%;
+    top: 50%;
+    display: block;
+    position: absolute;
+    transform: translate(-50%,-57%);
+}
+#logo {
+    width: 200pt;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    position: relative;
+}
+#caseNav .links {
+    width: 100%;
+    text-align: center;
+    margin-top: 10pt;
+}
+
+/* PORTFOLIO BODY */
+.caseBody img {
+    width: 100%;
+    max-width: 2048px;
+    margin: 15pt 0;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 1080px) {
+    #caseHead {
+        height: 20vh;
+    }
+    #caseNav {
+        width: 75%;
+        transform: translate(-50%,-50%);
+    }
+    #logo {
+        width: 65%;
+    }
+    #caseNav .links {
+        margin-top: 5pt;
+    }
+    
+    .mobile img {
+        width: 90%;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    [class*="col-"] { display: block; margin: 0 auto 0 auto;}
+}

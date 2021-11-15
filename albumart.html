@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />     
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        
+        <meta http-equiv="cache-control" content="Public" />
+        <meta http-equiv="Expires" content="31536000" />
+        
+        <meta name="author" content="Jordan Sigmund" />
+        <meta name="description" content="Hox Design Co. | Modern Design, Materialist Finishings." />
+        
+        <link rel="shortcut icon" href="svg/HOX.svg" />
+        
+        <title>Hox Design Co. | Album Art</title>
+        
+        <!-- Proxima Nova Weights 500 & 800/800 Italic -->
+        <link rel="stylesheet" href="https://use.typekit.net/wbb3aqp.css">
+        
+        <link href="finalwork.css" type="text/css" rel="stylesheet" />
+        
+        <!-- (C) 2021 Hox Design Co, Jordan Sigmund -->
+
+    </head>
+    
+    <body>
+        
+        <!-- Preloader -->
+        <div class="preloader-wrapper">
+            <div class="preloader">
+                <img src="svg/HOXfull.svg" class="mobile" alt="LOADING" />
+                <img src="svg/HOXfull.svg" class="desktop" alt="LOADING" />
+            </div>
+        </div>
+        
+        <!-- Title -->
+        <div id="blueStripe"></div>
+        <div id="caseHead" style="background-image: url(albumart/albumartheader.svg);">
+            <div id="caseNav">
+                <a href="index.html"> <img src="svg/HOX-white.svg" alt="Hox Design Co." id="logo" /> </a>
+                <div class="links">
+                    <a href="merch.html">MERCHANDISE DESIGN</a> |
+                    <a href="promo.html">PROMOTION</a> |
+                    <a href="#" style="color: #40557A">ALBUM ART</a> |
+                    <a href="exploration.html">EXPLORATION</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Images -->
+        <div class="mobile col-4 caseBody">
+            <img src="albumart/m-malrun.jpg" alt="Mallory Run Picture Perfect Album Layout" class="mobile" />
+            <img src="albumart/m-shiver.jpg" alt="Shiver Synthetic Dreams Cover Art" class="mobile" />
+            <img src="albumart/m-vw.jpg" alt="Velvet Waves Headspace Cover Art" class="mobile" />
+            <img src="albumart/m-ttl.jpg" alt="Tuesday's Too Late Separated Album Layout" class="mobile" />
+            <img src="albumart/m-area.jpg" alt="IceBeatChillz Area Acoustic Cover Art" class="mobile" />
+        </div>
+        
+        <div class="desktop d-col-6 d-grid caseBody">
+            <img src="albumart/d-malrun.jpg" alt="Mallory Run Picture Perfect Album Layout" class="desktop" />
+            <img src="albumart/d-shiver.jpg" alt="Shiver Synthetic Dreams Cover Art" class="desktop" />
+            <img src="albumart/d-vw.jpg" alt="Velvet Waves Headspace Cover Art" class="desktop" />
+            <img src="albumart/d-ttl.jpg" alt="Tuesday's Too Late Separated Album Layout" class="desktop" />
+            <img src="albumart/d-area.jpg" alt="IceBeatChillz Area Acoustic Cover Art" class="desktop" />
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <div class="footerInfo d-col-3">
+                <a href="https://www.instagram.com/hoxdesignco/" title="INSTAGRAM"><img src="svg/IG.svg" alt="Instagram" /></a>
+                <a href="https://www.facebook.com/hoxdesignco/" title="FACEBOOK"><img src="svg/FACEBOOK.svg" alt="Facebook" /></a>
+                <a href="https://forms.gle/GsUho5vwoR4YF6rQ7" target="_blank" title="CONTACT"><img src="svg/EMAIL.svg" alt="EMAIL" /></a>
+                <h4>© HOX DESIGN CO.</h4>
+            </div>
+        </div>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        
+        <script type="text/javascript">
+            $("document").ready(function(){
+    
+                var Body = $('body');
+
+                // Preloader
+                Body.addClass('preloader-site');
+            });
+
+            $(window).load(function() {
+
+                // Page Load
+                $('.preloader-wrapper').fadeOut();
+                $('body').removeClass('preloader-site');
+
+                $("body").hide().fadeIn(1000);
+
+                // Page Unload
+                $(document).on("click", "a", function () {
+
+                    var newUrl = $(this).attr("href");
+
+                    if (!newUrl || newUrl[0] === "#") {
+                        location.hash = newUrl;
+                        return;
+                    }
+
+                    $("body").fadeOut(500, function () {
+                        location = newUrl;
+                    });
+
+                    return false;
+                });
+            });
+        </script>
+        
+    </body>
+    
+</html>

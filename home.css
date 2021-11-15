@@ -9,19 +9,13 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
-.splash .hamburger {
-    display: block;
-    height: 25px;
-    padding-top: 25px;
-    margin: 0 auto 0 auto;
-}
 #splashMenu a {
     position: relative;
     display: block;
     float: left;
     font-weight: 800;
-    font-style: italic;
     font-size: 10pt;
+    font-style: italic;
     letter-spacing: 2pt;
     line-height: 100px;
     text-align: center;
@@ -60,7 +54,6 @@
 /* Work */
 .workblock {
     width: 100%;
-    max-width: 1000px;
     height: 0;
     padding-top: 100%;
     position: relative;
@@ -78,15 +71,22 @@
 }
 
 /* Media Queries */
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1080px) {
+    #splashMenu {
+        width: 100%;
+    }
+    
     #about img {
         padding-bottom: 20px;
     }
+    
+    h2 {
+        font-size: 16pt;
+    }
 }
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1080px) {
     #splashMenu a {
         font-size: 12pt;
-        letter-spacing: 3pt;
     }
     #splashMenu a:after {
         content: '';
@@ -108,12 +108,32 @@
         line-height: 100px;
     }
     
+    #work {
+        margin-top: 20px;
+        max-width: 2000px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0;
+        position: relative;
+        clear: both;
+    }
     .workblock {
-        width: 24%;
-        padding-top: 24%;
+        width: 49%;
+        max-width: 1000px;
+        padding-top: 49%;
+        max-height:1000px;
         margin: .5%;
         position: relative;
         float: left;
+    }
+    #ig {
+        width: 99%;
+        display: block;
+        float: left;
+        padding-top: 24.5%;
+        padding-bottom: 24.5%;
+        margin: .5% 0;
+        background-size: cover;
     }
     
     h2 {
@@ -162,13 +182,11 @@
         opacity: 1;
     }
     
-    #ig {
-        background-size: cover;
-    }
-    
     #about {
+        max-width: 2000px;
         padding-top: 20px;
-        margin: 0 140px 0 140px;
+        margin-left: auto;
+        margin-right: auto;
         clear: both;
         position: relative;
     }

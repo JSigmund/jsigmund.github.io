@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />     
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        
+        <meta http-equiv="cache-control" content="Public" />
+        <meta http-equiv="Expires" content="31536000" />
+        
+        <meta name="author" content="Jordan Sigmund" />
+        <meta name="description" content="Hox Design Co. | Modern Design, Materialist Finishings." />
+        
+        <link rel="shortcut icon" href="svg/HOX.svg" />
+        
+        <title>Hox Design Co. | Merchandise</title>
+        
+        <!-- Proxima Nova Weights 500 & 800/800 Italic -->
+        <link rel="stylesheet" href="https://use.typekit.net/wbb3aqp.css">
+        
+        <link href="finalwork.css" type="text/css" rel="stylesheet" />
+        
+        <!-- (C) 2021 Hox Design Co, Jordan Sigmund -->
+
+    </head>
+    
+    <body>
+        
+        <!-- Preloader -->
+        <div class="preloader-wrapper">
+            <div class="preloader">
+                <img src="svg/HOXfull.svg" class="mobile" alt="LOADING" />
+                <img src="svg/HOXfull.svg" class="desktop" alt="LOADING" />
+            </div>
+        </div>
+        
+        <!-- Header -->
+        <div id="blueStripe"></div>
+        <div id="caseHead" class="desktop" style="background-image: url(merch/merch-header.svg);">
+            <div id="caseNav">
+                <a href="index.html"> <img src="svg/HOX-white.svg" alt="Hox Design Co." id="logo" /> </a>
+                <div class="links">
+                    <a href="#" style="color: #40557A">MERCHANDISE DESIGN</a> |
+                    <a href="promo.html">PROMOTION</a> |
+                    <a href="albumart.html">ALBUM ART</a> |
+                    <a href="exploration.html">EXPLORATION</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Images -->
+        <div class="mobile col-4 caseBody">
+            <img src="merch/m-cheapkites.jpg" alt="Cheap Kites Tee Design" class="mobile" />
+            <img src="merch/m-sunfo.jpg" alt="Sunfo Tee Design"class="mobile" />
+            <img src="merch/m-malrun.jpg" alt="Mallory Run Tee Design" class="mobile" />
+            <img src="merch/m-ts.jpg" alt="The Standby Tee Design" class="mobile" />
+            <img src="merch/m-rfd.jpg" alt="Real Fake Doors" class="mobile" />
+        </div>
+        
+        <div class="desktop d-col-6 d-grid caseBody">
+            <img src="merch/d-cheapkites.jpg" alt="Cheap Kites Tee Design" class="desktop" />
+            <img src="merch/d-sunfo.jpg" alt="Sunfo Tee Design" class="desktop" />
+            <img src="merch/d-malrun.jpg" alt="Mallory Run Tee Design" class="desktop" />
+            <img src="merch/d-ts.jpg" alt="The Standby Tee Design" class="desktop" />
+            <img src="merch/d-rfd.jpg" alt="Real Fake Doors" class="desktop" />
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <div class="footerInfo d-col-3">
+                <a href="https://www.instagram.com/hoxdesignco/" title="INSTAGRAM"><img src="svg/IG.svg" alt="Instagram" /></a>
+                <a href="https://www.facebook.com/hoxdesignco/" title="FACEBOOK"><img src="svg/FACEBOOK.svg" alt="Facebook" /></a>
+                <a href="https://forms.gle/GsUho5vwoR4YF6rQ7" target="_blank" title="CONTACT"><img src="svg/EMAIL.svg" alt="EMAIL" /></a>
+                <h4>© HOX DESIGN CO.</h4>
+            </div>
+        </div>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        
+        <script type="text/javascript">
+            $("document").ready(function(){
+    
+                var Body = $('body');
+
+                // Preloader
+                Body.addClass('preloader-site');
+            });
+
+            $(window).load(function() {
+
+                // Page Load
+                $('.preloader-wrapper').fadeOut();
+                $('body').removeClass('preloader-site');
+
+                $("body").hide().fadeIn(1000);
+
+                // Page Unload
+                $(document).on("click", "a", function () {
+
+                    var newUrl = $(this).attr("href");
+
+                    if (!newUrl || newUrl[0] === "#") {
+                        location.hash = newUrl;
+                        return;
+                    }
+
+                    $("body").fadeOut(500, function () {
+                        location = newUrl;
+                    });
+
+                    return false;
+                });
+            });
+        </script>
+        
+    </body>
+    
+</html>
