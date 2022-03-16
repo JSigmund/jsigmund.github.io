@@ -1,6 +1,15 @@
 /* Case Study Styles */
 /* (C) 2021 Hox Design Co. / Jordan Sigmund */
 
+body {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
+html {
+    height: 100vh;
+    overflow: hidden;
+}
 /* MENU */
 #blueStripe {
     width: 100%;
@@ -9,7 +18,8 @@
     left: 0;
     background-color: #40557A;
     display: block;
-    position: relative;;
+    position: relative;
+    scroll-snap-align: start;
 }
 #caseHead {
     width: 100%;
@@ -48,6 +58,12 @@
     width: 100%;
     max-width: 2048px;
     margin: 15pt 0;
+    scroll-snap-align: center;
+}
+
+/* FOOTER SNAP SCROLL */
+.footer {
+    scroll-snap-align: end;
 }
 
 /* MEDIA QUERIES */
@@ -72,6 +88,7 @@
         margin-left: auto;
         margin-right: auto;
         display: block;
+        scroll-snap-align: center;
     }
 
     [class*="col-"] { display: block; margin: 0 auto 0 auto;}
